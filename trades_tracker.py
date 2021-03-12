@@ -48,15 +48,15 @@ def write_report(symbol_dictionary, order_dictionary, amount, report_file):
         f.close()
 
 trades_list = read_trades('activities.csv')
-print(trades_list)
+# print(trades_list)
 
 symbol_dictionary = process_symbols(trades_list)
-print(symbol_dictionary)
+# print(symbol_dictionary)
 
 order_dictionary = process_order(trades_list)
-print(order_dictionary)
+# print(order_dictionary)
 
 amount = process_amount(trades_list)
-print(amount)
+# print(amount)
 
 write_report(symbol_dictionary, order_dictionary, amount, 'report.txt')
