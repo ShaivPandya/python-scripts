@@ -5,8 +5,8 @@ class EmailsTest(unittest.TestCase):
     """test_basic tests a simple case where expected parameters are chosen, such as the first and last name
     of a person in the csv file"""
     def test_basic(self):
-        testcase = [None, "Blossom", "Gill"]                # First name "Blossom", Last name "Gill"
-        expected = "blossom@abc.edu"                        # Blossom Gill's email is 'blossom@abc.edu'
+        testcase = [None, "Jane", "Doe"]
+        expected = "janedoe@domain.com"
         self.assertEqual(find_email(testcase), expected)
     
     """Tests one name/parameter only (as opposed to two) which should output 'Missing parameters'"""
@@ -28,7 +28,7 @@ class EmailsTest(unittest.TestCase):
         self.assertEqual(find_email(testcase), expected)
     
     """Tests an integer input which should return 'Parameters can only be letters'"""
-    def test_numbers(self):
+    def test_two_numbers(self):
         testcase = [None, 5, 6]
         expected = "Parameters can only be letters"
         self.assertEqual(find_email(testcase), expected)
